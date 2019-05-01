@@ -1,0 +1,6 @@
+"hadoop fs -put mapper.py ./mapper.py"
+"hadoop fs -put reducer.py ./reducer.py"
+"hadoop jar /usr/hdp/current/hadoop-mapreduce-client/hadoop-streaming.jar -file mapper.py -mapper mapper.py -file reducer.py -reducer reducer.py -input /user/tatavag/nyc.data -output /user/vuduthnh/outputAssignment4/"
+"hadoop fs -get outputAssignment4"
+"cd outputAssignment4"
+"cat part-00000"
